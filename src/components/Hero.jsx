@@ -6,7 +6,7 @@ const Hero = () => {
 
   const handleGetStarted = () => {
     // Navigate to the search page when the "Start for Free" button is clicked
-    navigate('/search');
+    navigate('/login');
   };
 
   return (
