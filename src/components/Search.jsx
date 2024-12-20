@@ -1,12 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Search = () => {
+  const [username, setUsername] = useState({ email: "Guest" });
   const [searchCriteria, setSearchCriteria] = useState({
     destination: "",
     startDate: "",
     endDate: "",
     travelers: 1,
   });
+  const [searchResults, setSearchResults] = useState([]);
+
+  const navigate = useNavigate();
+
+  // Load user data from localStorage
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const user = JSON.parse(storedUser);
+      setUsername(user);
+      // Load search results specific to the logged-in user
+      const storedSearchResults = localStorage.getItem(user.email); // Using email as key
+      if (storedSearchResults) {
+        setSearchResults(JSON.parse(storedSearchResults));
+      }
+    } else {
+      setUsername({ email: "Guest" });
+    }
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -15,30 +36,53 @@ const Search = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    const resultMessage = `
-      Destination: ${searchCriteria.destination}
-      Start Date: ${searchCriteria.startDate}
-      End Date: ${searchCriteria.endDate}
-      Travelers: ${searchCriteria.travelers}
-    `;
-    
+    const newResult = {
+      destination: searchCriteria.destination,
+      startDate: searchCriteria.startDate,
+      endDate: searchCriteria.endDate,
+      travelers: searchCriteria.travelers,
+    };
 
-    alert(`Search Criteria:\n${resultMessage}`);
+    // Add the new result to the search results array
+    const updatedResults = [...searchResults, newResult];
+    setSearchResults(updatedResults);
+
+    // Save the updated search results to localStorage
+    localStorage.setItem(username.email, JSON.stringify(updatedResults)); // Store under the user's email
+
+    // Reset search criteria after submission
+    setSearchCriteria({
+      destination: "",
+      startDate: "",
+      endDate: "",
+      travelers: 1,
+    });
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    alert("Logged out successfully!");
+    navigate("/"); // Redirect to home page after logout
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 relative">
+      {/* Logout Button */}
+      <button
+        onClick={handleLogout}
+        className="absolute top-4 right-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
+      >
+        Logout
+      </button>
+
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold text-blue-600 text-center mb-6">
-          Search Your Trip
+          Search Your Trip - {username.email}
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Destination */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Destination
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Destination</label>
             <input
               type="text"
               name="destination"
@@ -50,9 +94,7 @@ const Search = () => {
           </div>
           {/* Start Date */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Start Date
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Start Date</label>
             <input
               type="date"
               name="startDate"
@@ -63,9 +105,7 @@ const Search = () => {
           </div>
           {/* End Date */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              End Date
-            </label>
+            <label className="block text-sm font-medium text-gray-700">End Date</label>
             <input
               type="date"
               name="endDate"
@@ -76,9 +116,7 @@ const Search = () => {
           </div>
           {/* Travelers */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Number of Travelers
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Number of Travelers</label>
             <input
               type="number"
               name="travelers"
@@ -97,6 +135,23 @@ const Search = () => {
           </button>
         </form>
       </div>
+
+      {/* Display all search results below the form */}
+      {searchResults.length > 0 && (
+        <div className="mt-8 bg-white p-4 rounded-lg shadow-lg w-full max-w-md">
+          <h2 className="text-xl font-bold text-blue-600">Search Results:</h2>
+          <div className="mt-4">
+            {searchResults.map((result, index) => (
+              <div key={index} className="mb-4">
+                <p><strong>Destination:</strong> {result.destination}</p>
+                <p><strong>Start Date:</strong> {result.startDate}</p>
+                <p><strong>End Date:</strong> {result.endDate}</p>
+                <p><strong>Travelers:</strong> {result.travelers}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
