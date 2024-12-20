@@ -2,9 +2,15 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import { navItems } from "../constants";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+    const navigate = useNavigate(); // Corrected useNavigate usage
+
+    const handleGetStarted = () => {
+        navigate('/Create_account'); // Navigate to the Create Account page
+    };
 
     const toggle = () => {
         setMobileDrawerOpen(!mobileDrawerOpen);
@@ -26,12 +32,16 @@ const Navbar = () => {
                         ))}
                     </ul>
                     <div className="hidden lg:flex justify-center space-x-12 items-center">
-                        <a href="#" className="py-2 px-3 border rounded-md">
+                        <button
+                            onClick={() => navigate('/Login')}
+                            className="py-2 px-3 border rounded-md">
                             Sign In
-                        </a>
-                        <a href="#" className="bg-gradient-to-r from-blue-500 to-blue-800 py-2 px-3 border rounded-md">
+                        </button>
+                        <button
+                            onClick={handleGetStarted}
+                            className="bg-gradient-to-r from-blue-500 to-blue-800 py-2 px-3 border rounded-md">
                             Create Account
-                        </a>
+                        </button>
                     </div>
                     <div className="lg:hidden flex flex-col justify-end">
                         <button onClick={toggle}>
@@ -51,12 +61,16 @@ const Navbar = () => {
                             ))}
                         </ul>
                         <div className="flex space-x-6">
-                            <a href="#" className="py-6 px-3 border rounded-md">
+                            <button
+                                onClick={() => navigate('/Login')}
+                                className="py-6 px-3 border rounded-md">
                                 Sign In
-                            </a>
-                            <a href="#" className="bg-gradient-to-r from-blue-500 to-blue-800 py-2 px-3 rounded-md text-neutral-50">
+                            </button>
+                            <button
+                                onClick={handleGetStarted}
+                                className="bg-gradient-to-r from-blue-500 to-blue-800 py-2 px-3 rounded-md text-neutral-50">
                                 Create an Account
-                            </a>
+                            </button>
                         </div>
                     </div>
                 )}
