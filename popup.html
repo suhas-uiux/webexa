@@ -1,26 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hello Extension</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 10px;
-      width: 200px;
-    }
-    button {
-      padding: 8px 12px;
-      background: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-  </style>
+  <title>Save My Sites</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h3>Hello Chrome Extension!</h3>
-  <button id="btn">Click Me</button>
+  <h3>My Saved Websites</h3>
+  <button id="addBtn">Add Current Site</button>
+  <button id="resetBtn" style="background-color: crimson; color: white; margin-top: 5px;">Reset All</button>
+  <ul id="siteList"></ul>
 
   <script src="popup.js"></script>
 </body>
