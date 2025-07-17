@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Day 3 - Popup with Storage",
+  "version": "1.0",
+  "description": "A simple Chrome Extension popup that saves input using chrome.storage.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "happy.png"
+    }
+  }
+}
