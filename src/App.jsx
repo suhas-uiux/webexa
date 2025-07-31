@@ -10,19 +10,25 @@ import Footer from './components/Footer';
 import SearchPage from './components/Search';
 import Login from './components/Login';
 import Create_account from './components/Create_account';
+ // ⬅️ new import
 
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <div className="max-w-7xl mx-auto pt-20 px-6">
-        <Routes>
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Create_account" element={<Create_account />} />
-          <Route path="/" element={<HeroSection />} />
-          <Route path="/search" element={<SearchPage />} />
-        </Routes>
-      </div>
+      
+        <div className="relative z-10">
+          <Navbar />
+          <div className="max-w-7xl mx-auto pt-20 px-6">
+            <Routes>
+              <Route path="/Login" element={<Login />} />
+              <Route path="/Create_account" element={<Create_account />} />
+              <Route path="/" element={<HeroSection />} />
+              <Route path="/search" element={<SearchPage />} />
+            </Routes>
+          </div>
+          <Footer />
+        </div>
+     
     </Router>
   );
 };
@@ -32,9 +38,8 @@ const HeroSection = () => (
     <Hero />
     <FeatureSection />
     <Flow />
-    <Pricing />
+    {/* <Pricing /> */}
     <Testimonials />
-    <Footer />
   </>
 );
 

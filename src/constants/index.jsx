@@ -61,62 +61,62 @@ export const testimonials = [
 export const features = [
   {
     icon: <MapPin />,
-    text: "Discover Unique Destinations",
+    text: " Enter Domain",
     description:
-      "Explore off-the-beaten-path locations and iconic landmarks with expert-curated travel plans.",
+      "Provide any valid domain name",
   },
   {
     icon: <CalendarDays />,
-    text: "Flexible Itineraries",
+    text: "Analyze Site",
     description:
-      "Plan trips with adjustable schedules, ensuring your travel fits perfectly into your lifestyle.",
+      "We parse the HTML and assets using smart logic",
   },
   {
     icon: <Ticket />,
-    text: "Streamlined Booking",
+    text: " Detect Technologies",
     description:
-      "Simplify your travel with one-stop booking for flights, accommodations, and activities.",
+      "Discover CMS, libraries, frameworks, and more",
   },
   {
     icon: <DollarSign />,
-    text: "Affordable Adventures",
+    text: " Export & Save",
     description:
-      "Find exclusive deals and budget-friendly options to make your dream trip a reality.",
+      "Download results in multiple formats",
   },
-  {
-    icon: <Users />,
-    text: "Group Travel Made Easy",
-    description:
-      "Coordinate with friends and family effortlessly for a memorable group travel experience.",
-  },
-  {
-    icon: <Compass />,
-    text: "Tailored Travel Experiences",
-    description:
-      "Customize your journey to match your preferences, interests, and pace.",
-  },
+  // {
+  //   icon: <Users />,
+  //   text: "Group Travel Made Easy",
+  //   description:
+  //     "Coordinate with friends and family effortlessly for a memorable group travel experience.",
+  // },
+  // {
+  //   icon: <Compass />,
+  //   text: "Tailored Travel Experiences",
+  //   description:
+  //     "Customize your journey to match your preferences, interests, and pace.",
+  // },
 ];
 
 export const checklistItems = [
   {
-    title: "Pack Smart",
+    title: "Fast & Accurate Detection",
     description:
-      "Get tips on what to pack for your destination and avoid overpacking.",
+      "Lightning-fast scans with pinpoint accuracy using pattern-based detection logic.",
   },
   {
-    title: "Plan Activities",
+    title: "Secure & Private",
     description:
-      "Ensure every day is filled with exciting adventures and relaxation opportunities.",
+      "We do not store your scans or share them—100% privacy-first design.",
   },
   {
-    title: "Set a Budget",
+    title: "Export & Share",
     description:
-      "Track your expenses and enjoy a stress-free trip without overspending.",
+      "Download results as PDF, CSV, or JSON—perfect for audits or reporting.",
   },
   {
-    title: "Stay Connected",
+    title: "Scan History",
     description:
-      "Access guides, maps, and communication tools to stay connected wherever you are.",
+      "Your dashboard saves all your previous scans in one place.",
   },
 ];
 
@@ -162,11 +162,10 @@ export const resourcesLinks = [
 ];
 
 export const platformLinks = [
-  { href: "#", text: "Top Destinations" },
-  { href: "#", text: "Best Travel Deals" },
-  { href: "#", text: "Weather Insights" },
-  { href: "#", text: "Flight Schedules" },
-  { href: "#", text: "Travel Safety" },
+  { href: "#", text: "About" },
+  { href: "#", text: "Contact" },
+  { href: "#", text: "GitHub" },
+  { href: "#", text: "Privacy" },
 ];
 
 export const communityLinks = [
@@ -176,3 +175,6 @@ export const communityLinks = [
   { href: "#", text: "Cultural Exchanges" },
   { href: "#", text: "Local Guides" },
 ];
+
+
+

@@ -7,8 +7,8 @@ const FeatureSection = () => {
                 feature
             </span>
             <h2 className="text-3xl sm:text-5xl lg;text-6xl mt-10 lg:mt-20 tracking wide">
-                Planning your
-                <span className="bg-gradient-to-r from-blue-500 to-blue-900 text-transparent bg-clip-text">{" "}Journey</span>
+                How it
+                <span className="bg-gradient-to-r from-blue-500 to-blue-900 text-transparent bg-clip-text">{" "}Works</span>
             </h2>
         </div>
         <div className="flex flex-wrap mt-10 lg:mt-20">

@@ -1,56 +1,38 @@
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-import video1 from "../assets/travel.mp4"; // Import video
 
 const Hero = () => {
   const navigate = useNavigate(); // Create the navigate function
 
   const handleGetStarted = () => {
-    // Navigate to the search page when the "Start for Free" button is clicked
+    // Navigate to the login page when the "Detect" button is clicked
     navigate('/login');
   };
 
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20">
-      <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-        Your Path to Amazing{" "}
+    <div className="flex flex-col items-center mt-5 lg:mt-9 px-8">
+      <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide leading-tight">
+        Know What Powers Any{" "}
         <span className="bg-gradient-to-r from-blue-500 to-blue-900 text-transparent bg-clip-text">
-          Travel Adventures
+          Website in Seconds
         </span>
       </h1>
-      <p className="mt-10 text-lg text-center text-neutral-500 max-w-7xl">
-        At Travel Point, we believe that every journey is an opportunity for
-        discovery, excitement, and growth. Whether you're planning a weekend
-        getaway or a dream vacation, we provide the resources and inspiration to
-        help you make the most of every adventure. From finding the best
-        destinations to expert tips on making your trip seamless, we’re here to
-        guide you every step of the way. Let us be your trusted companion as you
-        explore new horizons and create memories that will last a lifetime.
+
+      <p className="mt-6 lg:mt-8 text-lg sm:text-xl text-center text-neutral-500 max-w-4xl">
+        Webexa Digital scans and reveals the exact technologies – from frontend frameworks to CMS platforms, backend stacks, analytics tools, and more – with just a click.
       </p>
-      <div className="flex justify-center my-10">
-        {/* Updated button to navigate to search page */}
+
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 sm:mt-10">
+        <input
+          type="text"
+          placeholder="website link"
+          className="py-3 px-5 w-[300px] sm:w-[400px] border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
         <button
-          onClick={handleGetStarted} // Call the handleGetStarted function on click
-          className="bg-gradient-to-r from-blue-500 to-blue-900 py-3 px-4 mx-3 rounded-md text-neutral-50"
+          onClick={handleGetStarted}
+          className="bg-gradient-to-r from-blue-500 to-blue-900 py-3 px-6 rounded-md text-white hover:brightness-110 transition duration-200"
         >
-          Start for Free{">"}
+          Detect &gt;
         </button>
-        <a
-          href="#"
-          className="py-3 px-4 rounded-md border"
-        >
-          Know More
-        </a>
-      </div>
-      <div className="mt-10">
-        <video
-          autoPlay
-          loop
-          muted
-          className="w-full h-screen object-cover rounded-lg border border-blue-700 shadow-blue-400 mx-2 my-4"
-        >
-          <source src={video1} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </div>
     </div>
   );
