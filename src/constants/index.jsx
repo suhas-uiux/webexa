@@ -1,9 +1,5 @@
-import { MapPin } from "lucide-react";
-import { DollarSign } from "lucide-react";
-import { CalendarDays } from "lucide-react";
-import { Ticket } from "lucide-react";
-import { Users } from "lucide-react";
-import { Compass } from "lucide-react";
+import { Globe, BarChart2, Radar, Download } from "lucide-react";
+import { Zap, ShieldCheck, FileDown, History } from "lucide-react";
 
 import user1 from "../assets/profile-pictures/user1.jpg";
 import user2 from "../assets/profile-pictures/user2.jpg";
@@ -57,32 +53,28 @@ export const testimonials = [
     text: "Their expertise made all the difference. We were able to relax and truly enjoy our vacation knowing everything was handled perfectly.",
   },
 ];
-
 export const features = [
   {
-    icon: <MapPin />,
-    text: " Enter Domain",
-    description:
-      "Provide any valid domain name",
+    icon: <Globe size={24} />,
+    text: "Domain",
+    description: "Enter the website URL to begin the detection process.",
   },
   {
-    icon: <CalendarDays />,
+    icon: <BarChart2 size={24} />,
     text: "Analyze Site",
-    description:
-      "We parse the HTML and assets using smart logic",
+    description: "We analyze the site structure and content in real-time.",
   },
   {
-    icon: <Ticket />,
-    text: " Detect Technologies",
-    description:
-      "Discover CMS, libraries, frameworks, and more",
+    icon: <Radar size={24} />,
+    text: "Detect Technologies",
+    description: "Identify all the technologies powering the site.",
   },
   {
-    icon: <DollarSign />,
-    text: " Export & Save",
-    description:
-      "Download results in multiple formats",
+    icon: <Download size={24} />,
+    text: "Export & Save",
+    description: "Download and save a detailed tech report instantly.",
   },
+];
   // {
   //   icon: <Users />,
   //   text: "Group Travel Made Easy",
@@ -95,30 +87,34 @@ export const features = [
   //   description:
   //     "Customize your journey to match your preferences, interests, and pace.",
   // },
-];
 
-export const checklistItems = [
-  {
-    title: "Fast & Accurate Detection",
-    description:
-      "Lightning-fast scans with pinpoint accuracy using pattern-based detection logic.",
-  },
-  {
-    title: "Secure & Private",
-    description:
-      "We do not store your scans or share them—100% privacy-first design.",
-  },
-  {
-    title: "Export & Share",
-    description:
-      "Download results as PDF, CSV, or JSON—perfect for audits or reporting.",
-  },
-  {
-    title: "Scan History",
-    description:
-      "Your dashboard saves all your previous scans in one place.",
-  },
-];
+
+  export const checklistItems = [
+    {
+      icon: <Zap size={24} />,
+      title: "Fast & Accurate Detection",
+      description:
+        "Lightning-fast scans with pinpoint accuracy using pattern-based detection logic.",
+    },
+    {
+      icon: <ShieldCheck size={24} />,
+      title: "Secure & Private",
+      description:
+        "We do not store your scans or share them—100% privacy-first design.",
+    },
+    {
+      icon: <FileDown size={24} />,
+      title: "Export & Share",
+      description:
+        "Download results as PDF, CSV, or JSON—perfect for audits or reporting.",
+    },
+    {
+      icon: <History size={24} />,
+      title: "Scan History",
+      description:
+        "Your dashboard saves all your previous scans in one place.",
+    },
+  ];
 
 export const pricingOptions = [
   {

@@ -1,37 +1,36 @@
-import { CheckCircle2 } from "lucide-react";
-import codeImg from "../assets/codeImg.webp";
 import { checklistItems } from "../constants";
+
 const Flow = () => {
   return (
-    <div className="mt-20">
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
-        Why Use Our {" "}
-        <span className="bg-gradient-to-r from-blue-500 to-blue-900 text-transparent bg-clip-text">
-        Tool?
+    <section
+      id="features"
+      className="bg-white pt-20 pb-16 px-6 min-h-[600px] text-gray-900"
+    >
+      <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center tracking-wide font-bold">
+        Why Use Our{" "}
+        <span className="bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
+          Tool?
         </span>
-        </h2> 
-        <div className="flex flex-wrap justify-center mt-7">
-            <div className="p-2 w-full lg:w-1/2">
-                <img src={codeImg} alt="Code"/>
-            </div>
-            <div className="pt-12 w-full lg:w-1/2">
-                {checklistItems.map((item,index)=>(
-                    <div key={index} className="flex mb-12">
-                        <div className="text-green-600 mx-6  h-10 w-10 p-2 justify-center items-center rounded-full">
-                            <CheckCircle2/>
-                        </div>
-                        <div>
-                            <h5 className="mt-1 mb-2 text-xl">{item.title}</h5>
-                            <p className="text-md text-neutral-500">{item.description}</p>
-                        </div>
-                    </div>    
-                ))}
+      </h2>
 
+      <div className="mt-12 flex flex-wrap justify-center gap-6 px-4">
+        {checklistItems.map((item, index) => (
+          <div
+            key={index}
+            className="w-[300px] min-h-[260px] bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300 text-center flex flex-col justify-between"
+          >
+            <div className="flex items-center justify-center h-14 w-14 mb-4 rounded-full bg-blue-100 text-blue-600 shadow-md mx-auto">
+              {item.icon}
             </div>
-            
-        </div>     
-    </div>
-  )
-}
+            <h5 className="text-xl font-semibold mb-2 text-gray-800">
+              {item.title}
+            </h5>
+            <p className="text-sm text-gray-600">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
-export default Flow
+export default Flow;
