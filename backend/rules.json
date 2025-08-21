@@ -1,0 +1,147 @@
+[
+    {
+      "name": "WordPress",
+      "rules": {
+        "meta": { "generator": ["wordpress"] },
+        "html": ["wp-content", "wp-json", "twentytwenty"]
+      },
+      "threshold": 8
+    },
+    {
+      "name": "Drupal",
+      "rules": {
+        "meta": { "generator": ["drupal"] },
+        "html": ["drupal-settings-json", "sites/default"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Joomla",
+      "rules": {
+        "meta": { "generator": ["joomla"] },
+        "html": ["joomla!", "com_content", "Joomla!"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Shopify",
+      "rules": {
+        "html": ["cdn.shopify.com", "shopify-buy", "Shopify.theme"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "jQuery",
+      "rules": {
+        "script": ["jquery"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Bootstrap",
+      "rules": {
+        "link": ["bootstrap"],
+        "script": ["bootstrap"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Tailwind CSS",
+      "rules": {
+        "html": ["tailwindcss", "class=\".*(bg-|text-|grid|flex)"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Font Awesome",
+      "rules": {
+        "link": ["font-awesome", "fontawesome"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Google Analytics",
+      "rules": {
+        "script": ["gtag", "ga.js", "analytics.js"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Mixpanel",
+      "rules": {
+        "script": ["mixpanel"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Hotjar",
+      "rules": {
+        "script": ["hotjar"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Cloudflare",
+      "rules": {
+        "html": ["cdn-cgi"],
+        "script": ["cloudflare"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Akamai",
+      "rules": {
+        "script": ["akamai", "edgekey.net"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Webpack",
+      "rules": {
+        "html": ["webpackJsonp", "webpack_require"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Vite",
+      "rules": {
+        "html": ["vite/dist/client"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Next.js",
+      "rules": {
+        "html": ["_NEXT_DATA_"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Svelte",
+      "rules": {
+        "html": ["data-svelte"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Remix",
+      "rules": {
+        "html": ["_REMIX_MANIFEST_"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Astro",
+      "rules": {
+        "html": ["astro/client"]
+      },
+      "threshold": 5
+    },
+    {
+      "name": "Angular",
+      "rules": {
+        "html": ["ng-version", "ng-app"]
+      },
+      "threshold":5
+    }
+  ]
