@@ -33,8 +33,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className=" p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold text-blue-600 text-center mb-6">
           Login to your account
         </h1>

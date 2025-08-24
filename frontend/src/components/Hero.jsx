@@ -70,7 +70,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full bg-gradient-to-b from-white via-gray-50 to-white text-gray-900 py-32 overflow-hidden"
+      className="relative w-full  py-32 overflow-hidden"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col items-center justify-center text-center">
         <h1 className="text-5xl font-bold leading-tight tracking-tight">
@@ -80,7 +80,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="mt-6 lg:mt-8 text-lg sm:text-xl text-gray-600 max-w-3xl">
+        <p className="mt-6 lg:mt-8 text-lg sm:text-xl text-white-600 max-w-3xl">
           Webexa Digital scans and reveals the exact technologies – from frontend frameworks to CMS platforms, backend stacks, analytics tools, and more.
         </p>
 

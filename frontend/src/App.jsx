@@ -10,13 +10,29 @@ import Footer from './components/Footer';
 import SearchPage from './components/Search';
 import Login from './components/Login';
 import Create_account from './components/Create_account';
-import { AuthProvider } from './AuthContext'; // ⬅️ add this import
+import { AuthProvider } from './AuthContext';
 
 const App = () => {
   return (
     <Router>
-      <AuthProvider> {/* ⬅️ wrap your app with AuthProvider */}
-        <div className="relative z-10">
+      <AuthProvider>
+        {/* Full screen gradient background */}
+        <div className="relative min-h-screen bg-gradient-to-b from-black via-blue-900 to-blue-700 text-white overflow-hidden">
+          
+          {/* Animated white threads */}
+          <div className="absolute inset-0 -z-10">
+            {[...Array(10)].map((_, i) => (
+              <div
+                key={i}
+                className={`absolute h-[2px] w-[200%] bg-white opacity-20 top-[${i * 10}%] animate-thread`}
+                style={{
+                  transform: `rotate(${i * 15}deg)`,
+                  animationDelay: `${i * 0.5}s`,
+                }}
+              ></div>
+            ))}
+          </div>
+
           <Navbar />
           <div className="max-w-7xl mx-auto pt-20 px-6">
             <Routes>
