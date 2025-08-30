@@ -35,7 +35,7 @@ export default function Hero() {
     if (!websiteUrl.trim()) return alert("Please enter a URL");
 
     setLoading(true);
-    setDetected([]);
+    setDetected([]);  
 
     try {
       const res = await fetch("http://localhost:5000/detect", {
@@ -44,22 +44,20 @@ export default function Hero() {
         body: JSON.stringify({ url: websiteUrl }),
       });
 
-      const data = await res.json();
-      if (data.error) {
-        setDetected([{ name: "Error", logo: "", msg: data.error }]);
-      } else {
-        const techList = data.output
-          .split("\n")
-          .map(t => t.trim())
-          .filter(t => t && !t.includes("Detected Technologies"));
+     const data = await res.json();
 
-        setDetected(
-          techList.map(name => ({
-            name,
-            logo: techLogos[name] || "https://via.placeholder.com/40?text=?"
-          }))
-        );
-      }
+if (data.error) {
+  setDetected([{ name: "Error", logo: "", msg: data.error }]);
+} else if (!data.technologies || data.technologies.length === 0) {
+  setDetected([{ name: "No major technologies detected", logo: "" }]);
+} else {
+  setDetected(
+    data.technologies.map(name => ({
+      name,
+      logo: techLogos[name] || "https://via.placeholder.com/40?text=?"
+    }))
+  );
+}
     } catch (err) {
       setDetected([{ name: "Error", logo: "", msg: err.message }]);
     } finally {

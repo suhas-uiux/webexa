@@ -1,0 +1,54 @@
+{
+  "React": { "category": "JavaScript Frameworks", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  "Angular": { "category": "JavaScript Frameworks", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
+  "Vue.js": { "category": "JavaScript Frameworks", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
+
+  "Node.js": { "category": "Backend", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  "Express": { "category": "Backend", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+  "Django": { "category": "Backend", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+  "Flask": { "category": "Backend", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
+  "Laravel": { "category": "Backend", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" },
+  "Spring": { "category": "Backend", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+
+  "PHP": { "category": "Programming Languages", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+  "Python": { "category": "Programming Languages", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  "Java": { "category": "Programming Languages", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  "C#": { "category": "Programming Languages", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+  "Go": { "category": "Programming Languages", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
+  "Ruby": { "category": "Programming Languages", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" },
+
+  "WordPress": { "category": "CMS", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
+  "Drupal": { "category": "CMS", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drupal/drupal-original.svg" },
+  "Joomla": { "category": "CMS", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/joomla/joomla-original.svg" },
+  "Magento": { "category": "E-Commerce", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg" },
+  "Shopify": { "category": "E-Commerce", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg" },
+
+  "Bootstrap": { "category": "UI Libraries", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
+  "TailwindCSS": { "category": "UI Libraries", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+  "Material-UI": { "category": "UI Libraries", "logo": "https://mui.com/static/logo.png" },
+
+  "MySQL": { "category": "Databases", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  "PostgreSQL": { "category": "Databases", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  "MongoDB": { "category": "Databases", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  "SQLite": { "category": "Databases", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" },
+  "Redis": { "category": "Databases", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
+
+  "Apache": { "category": "Web Servers", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" },
+  "Nginx": { "category": "Web Servers", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" },
+  "IIS": { "category": "Web Servers", "logo": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png" },
+
+  "AWS": { "category": "Cloud Platforms", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+  "Amazon S3": { "category": "Cloud Storage", "logo": "https://cdn-icons-png.flaticon.com/512/873/873107.png" },
+  "Google Cloud": { "category": "Cloud Platforms", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
+  "Azure": { "category": "Cloud Platforms", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+  "Firebase": { "category": "Cloud Platforms", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+
+  "Docker": { "category": "DevOps", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  "Kubernetes": { "category": "DevOps", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+  "Jenkins": { "category": "DevOps", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
+  "GitHub Actions": { "category": "DevOps", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+
+  "Google Analytics": { "category": "Analytics", "logo": "https://cdn-icons-png.flaticon.com/512/281/281764.png" },
+  "Hotjar": { "category": "Analytics", "logo": "https://cdn-icons-png.flaticon.com/512/5968/5968841.png" },
+  "Mixpanel": { "category": "Analytics", "logo": "https://cdn-icons-png.flaticon.com/512/5968/5968866.png" }
+}

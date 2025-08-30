@@ -1,0 +1,223 @@
+/* body {
+  font-family: Arial, sans-serif;
+  padding: 12px;
+  background: #f9fafb;
+  width: 350px;
+} */
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#detectBtn {
+  display: block;
+  margin: 0 auto 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#detectBtn:hover {
+  background: #1e40af;
+}
+
+#result {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.category-block {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 8px;              
+  margin-bottom: 8px;      
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.category-block h4 {
+  font-size: 12px;           
+  margin-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 3px;
+  color: #111827;
+}
+
+.tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;                 
+}
+
+.tech-card {
+  flex: 1 1 80px;           
+  max-width: 100px;
+  padding: 6px;             
+  border-radius: 5px;
+  background: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.tech-card:hover {
+  transform: scale(1.05);
+  background: #e5e7eb;
+}
+
+.tech-logo {
+  width: 24px;               
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.tech-card span {
+  font-size: 11px;           
+  text-align: center;
+  color: #111827;
+}
+
+.sub-header {
+  background: #dbd6d62c;         
+  padding: 8px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  /* border-radius: 6px;              */
+  margin-bottom: 10px;  
+
+}
+
+.sub-header-title {
+  font-size: 14px;
+  font-weight:600;
+  margin: 0;
+  color: #2563eb;
+}
+
+.export-btn {
+  padding: 4px 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.export-btn:hover {
+  background-color: #1e40af;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;            
+  margin: 0;             
+  background: #f9fafb;
+  width: 350px;           
+  box-sizing: border-box;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2563eb;  
+  color: white;
+  padding: 10px 14px;
+  width: 100%;           
+  box-sizing: border-box;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 28px;
+  height: 28px;
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.navbar-right .toggle-btn {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.navbar-right .toggle-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Dark mode for entire content */
+.content.dark-mode {
+  background-color: #000000;  /* black background */
+  /* color: #ffffff;             white text */
+}
+
+/* Tech cards dark mode */
+.content.dark-mode .category-block {
+  background-color: #1f1f1f; 
+            
+  border: 1px solid #333;    
+}
+
+/* Sub-header dark mode */
+.content.dark-mode .sub-header {
+  background-color: #1a1a1a; /* dark sub-header */
+  /* color: #ffffff; */
+}
+
+/* Tech card dark mode */
+.content.dark-mode .tech-card {
+  background-color: #2a2a2a; /* slightly lighter than category block */
+  /* color: #ffffff; */
+}
+
+/* Optional: export button dark mode */
+.content.dark-mode .export-btn {
+  background-color: #6c6565;  /* keep button blue or adjust */
+  /* color: white; */
+}
+
+.content.dark-mode .export-btn:hover {
+  background-color: #2563eb;
+}
+
+.content.dark-mode .tech-card span,
+.content.dark-mode .category-block h4,
+.content.dark-mode .sub-header-title,
+.content.dark-mode #result,
+.content.dark-mode h3,
+.content.dark-mode .export-btn
+ {
+  color: #ffffff;
+}
+
+/* Optional: links like reload */
+.content.dark-mode a,
+.content.dark-mode #reload-link {
+  color: #3b82f6; /* bright blue for visibility */
+}

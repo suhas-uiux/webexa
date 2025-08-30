@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Tech Analyzer",
+  "version": "1.0",
+  "description": "An extension that shows detected technologies on websites.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "permissions": ["tabs", "activeTab"],
+
+  "web_accessible_resources": [
+  {
+    "resources": ["tech-meta.json"],
+    "matches": ["<all_urls>"]
+  }
+]
+
+
+}

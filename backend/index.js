@@ -123,7 +123,11 @@ function detectFrontendFromHTML(html) {
   }
 
   // --- STEP 2: Puppeteer fallback ---
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+     headless: true,
+     executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    });
+
   const page = await browser.newPage();
 
   let serverHeaders = {};
@@ -193,10 +197,9 @@ function detectFrontendFromHTML(html) {
   await browser.close();
 
   // --- STEP 3: Print results ---
-  console.log(`\nDetected Technologies on ${url}:\n`);
-  if (detected.size === 0) {
-    console.log("No known technologies found.");
-  } else {
-    detected.forEach(tech => console.log(tech));
-  }
+ const output = {
+  url,
+  technologies: Array.from(detected)
+};
+console.log(JSON.stringify(output));
 })();
